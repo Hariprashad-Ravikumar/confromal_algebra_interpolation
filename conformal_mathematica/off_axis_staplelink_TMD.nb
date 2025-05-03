@@ -1,0 +1,582 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19592,        574]
+NotebookOptionsPosition[     18817,        554]
+NotebookOutlinePosition[     19212,        570]
+CellTagsIndexPosition[     19169,        567]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"v", " ", "=", " ", 
+   RowBox[{"1", "*", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"0.303023", "*", "1"}], ",", "1", ",", "0"}], "}"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"b", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "0", ",", "1"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vVECTOR", "=", 
+   RowBox[{"{", 
+    RowBox[{"Blue", ",", 
+     RowBox[{"Thickness", "[", "0.01", "]"}], ",", 
+     RowBox[{"Arrow", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", "v"}], "}"}], "]"}], 
+     ",", 
+     RowBox[{"Style", "[", 
+      RowBox[{
+       RowBox[{"Text", "[", 
+        RowBox[{"\"\<v\>\"", ",", 
+         RowBox[{"v", "+", 
+          RowBox[{"{", 
+           RowBox[{"0.1", ",", "0.1", ",", "0.1"}], "}"}]}]}], "]"}], ",", 
+       RowBox[{"FontWeight", "->", "Bold"}], ",", 
+       RowBox[{"FontSize", "->", "18"}]}], "]"}]}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"bVECTOR", "=", 
+    RowBox[{"{", 
+     RowBox[{"Red", ",", 
+      RowBox[{"Thickness", "[", "0.01", "]"}], ",", 
+      RowBox[{"Arrow", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", "b"}], "}"}], "]"}], 
+      ",", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Text", "[", 
+         RowBox[{"\"\<b\>\"", ",", 
+          RowBox[{"b", "+", 
+           RowBox[{"{", 
+            RowBox[{"0.1", ",", "0.1", ",", "0.1"}], "}"}]}]}], "]"}], ",", 
+        RowBox[{"FontWeight", "->", "Bold"}], ",", 
+        RowBox[{"FontSize", "->", "18"}]}], "]"}]}], "}"}]}], ";"}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{"Graphics3D", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"vVECTOR", ",", "bVECTOR"}], "}"}], ",", 
+   RowBox[{"Axes", "->", "True"}], ",", 
+   RowBox[{"FaceGrids", "->", "All"}], ",", 
+   RowBox[{"AxesOrigin", "->", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], ",", 
+   RowBox[{"AxesLabel", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<x\>\"", ",", 
+        RowBox[{"FontSize", "->", "18"}]}], "]"}], ",", 
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<y\>\"", ",", 
+        RowBox[{"FontSize", "->", "18"}]}], "]"}], ",", 
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<z\>\"", ",", 
+        RowBox[{"FontSize", "->", "18"}]}], "]"}]}], "}"}]}], ",", 
+   RowBox[{"PlotRange", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "4"}], ",", "4"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "4"}], ",", "4"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "4"}], ",", "4"}], "}"}]}], "}"}]}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"etav", "=", 
+   RowBox[{"{", 
+    RowBox[{"Blue", ",", 
+     RowBox[{"Thickness", "[", "0.01", "]"}], ",", 
+     RowBox[{"Line", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+        RowBox[{"5", "*", "v"}]}], "}"}], "]"}]}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"etavpb", "=", 
+   RowBox[{"{", 
+    RowBox[{"Blue", ",", 
+     RowBox[{"Thickness", "[", "0.01", "]"}], ",", 
+     RowBox[{"Line", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"v", "+", "b"}], ",", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"5", "*", "v"}], ")"}], "+", "b"}]}], "}"}], "]"}]}], 
+    "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"metav", "=", 
+   RowBox[{"{", 
+    RowBox[{"Blue", ",", 
+     RowBox[{"Thickness", "[", "0.01", "]"}], ",", 
+     RowBox[{"Line", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+        RowBox[{
+         RowBox[{"-", "5"}], "*", "v"}]}], "}"}], "]"}]}], "}"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"metavpb", "=", 
+   RowBox[{"{", 
+    RowBox[{"Blue", ",", 
+     RowBox[{"Thickness", "[", "0.01", "]"}], ",", 
+     RowBox[{"Line", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"v", "+", "b"}], ",", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "5"}], "*", "v"}], ")"}], "+", "b"}]}], "}"}], 
+      "]"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"etavRIGHT", "=", 
+   RowBox[{"{", 
+    RowBox[{"Blue", ",", 
+     RowBox[{"Thickness", "[", "0.01", "]"}], ",", 
+     RowBox[{"Line", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"5", "*", "v"}], ",", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"5", "*", "v"}], ")"}], "+", "b"}]}], "}"}], "]"}]}], 
+    "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"etavLEFT", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"Blue", ",", 
+     RowBox[{"Thickness", "[", "0.01", "]"}], ",", 
+     RowBox[{"Line", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "5"}], "*", "v"}], ",", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "5"}], "*", "v"}], ")"}], "+", "b"}]}], "}"}], 
+      "]"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Graphics3D", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "etav", ",", " ", "etavpb", ",", " ", "metav", ",", " ", "metavpb", ",", 
+     " ", "etavRIGHT", ",", " ", "etavLEFT", ",", " ", "bVECTOR"}], "}"}], 
+   ",", 
+   RowBox[{"Axes", "->", "True"}], ",", 
+   RowBox[{"AxesOrigin", "->", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], ",", 
+   RowBox[{"AxesLabel", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<x\>\"", ",", 
+        RowBox[{"FontSize", "->", "18"}]}], "]"}], ",", 
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<y\>\"", ",", 
+        RowBox[{"FontSize", "->", "18"}]}], "]"}], ",", 
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<z\>\"", ",", 
+        RowBox[{"FontSize", "->", "18"}]}], "]"}]}], "}"}]}], ",", 
+   RowBox[{"PlotRange", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "6"}], ",", "6"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "6"}], ",", "6"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "6"}], ",", "6"}], "}"}]}], "}"}]}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"v2Dxz", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"v", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], ",", 
+     RowBox[{"v", "[", 
+      RowBox[{"[", "2", "]"}], "]"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"b2Dxy", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"b", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], ",", 
+     RowBox[{"b", "[", 
+      RowBox[{"[", "3", "]"}], "]"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"etav2Dxz", "=", 
+   RowBox[{"{", 
+    RowBox[{"Blue", ",", 
+     RowBox[{"Thickness", "[", "0.01", "]"}], ",", 
+     RowBox[{"Line", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0"}], "}"}], ",", 
+        RowBox[{"9", "*", "v2Dxz"}]}], "}"}], "]"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"metav2Dxz", "=", 
+   RowBox[{"{", 
+    RowBox[{"Blue", ",", 
+     RowBox[{"Thickness", "[", "0.01", "]"}], ",", 
+     RowBox[{"Line", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0"}], "}"}], ",", 
+        RowBox[{
+         RowBox[{"-", "9"}], "*", "v2Dxz"}]}], "}"}], "]"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vUNIT", "=", 
+   RowBox[{"{", 
+    RowBox[{"Gray", ",", 
+     RowBox[{"Thickness", "[", "0.005", "]"}], ",", " ", 
+     RowBox[{"Disk", "[", 
+      RowBox[{"v2Dxz", ",", "0.15"}], "]"}], ",", 
+     RowBox[{"Disk", "[", 
+      RowBox[{
+       RowBox[{"2", "*", "v2Dxz"}], ",", "0.15"}], "]"}], ",", 
+     RowBox[{"Disk", "[", 
+      RowBox[{
+       RowBox[{"3", "*", "v2Dxz"}], ",", "0.15"}], "]"}], ",", 
+     RowBox[{"Disk", "[", 
+      RowBox[{
+       RowBox[{"4", "*", "v2Dxz"}], ",", "0.15"}], "]"}], ",", 
+     RowBox[{"Disk", "[", 
+      RowBox[{
+       RowBox[{"5", "*", "v2Dxz"}], ",", "0.15"}], "]"}], " ", ",", 
+     RowBox[{"Style", "[", 
+      RowBox[{
+       RowBox[{"FontWeight", "->", "Bold"}], ",", 
+       RowBox[{"FontSize", "->", "18"}]}], "]"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"bVECTOR2Dxy", "=", 
+   RowBox[{"{", 
+    RowBox[{"Red", ",", 
+     RowBox[{"Thickness", "[", "0.01", "]"}], ",", 
+     RowBox[{"Line", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0"}], "}"}], ",", "b2Dxy"}], "}"}], "]"}], ",", 
+     RowBox[{"Style", "[", 
+      RowBox[{
+       RowBox[{"Text", "[", 
+        RowBox[{"\"\<b\>\"", ",", 
+         RowBox[{"b2Dxy", "+", 
+          RowBox[{"{", 
+           RowBox[{"0.1", ",", "0.1"}], "}"}]}]}], "]"}], ",", 
+       RowBox[{"FontWeight", "->", "Bold"}], ",", 
+       RowBox[{"FontSize", "->", "18"}]}], "]"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Graphics", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"etav2Dxz", ",", " ", "metav2Dxz", ",", " ", "vUNIT"}], "}"}], 
+   ",", 
+   RowBox[{"Axes", "->", "True"}], ",", 
+   RowBox[{"AxesOrigin", "->", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "0"}], "}"}]}], ",", 
+   RowBox[{"AxesLabel", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<x\>\"", ",", 
+        RowBox[{"FontSize", "->", "18"}]}], "]"}], ",", 
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<y\>\"", ",", 
+        RowBox[{"FontSize", "->", "18"}]}], "]"}]}], "}"}]}], ",", 
+   RowBox[{"PlotRange", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "9"}], ",", "9"}], "}"}]}], "}"}]}], ",", 
+   RowBox[{"GridLines", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Range", "[", 
+       RowBox[{
+        RowBox[{"-", "11"}], ",", "11"}], "]"}], ",", 
+      RowBox[{"Range", "[", 
+       RowBox[{
+        RowBox[{"-", "11"}], ",", "11"}], "]"}]}], "}"}]}], ",", 
+   RowBox[{"GridLinesStyle", "->", 
+    RowBox[{"Directive", "[", 
+     RowBox[{"Gray", ",", "Dashed"}], "]"}]}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Graphics", "[", 
+  RowBox[{
+   RowBox[{"{", "bVECTOR2Dxy", "}"}], ",", 
+   RowBox[{"Axes", "->", "True"}], ",", 
+   RowBox[{"AxesOrigin", "->", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "0"}], "}"}]}], ",", 
+   RowBox[{"AxesLabel", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<x\>\"", ",", 
+        RowBox[{"FontSize", "->", "18"}]}], "]"}], ",", 
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<z\>\"", ",", 
+        RowBox[{"FontSize", "->", "18"}]}], "]"}]}], "}"}]}], ",", 
+   RowBox[{"PlotRange", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "6"}], ",", "6"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "6"}], ",", "6"}], "}"}]}], "}"}]}], ",", 
+   RowBox[{"GridLines", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Range", "[", 
+       RowBox[{
+        RowBox[{"-", "11"}], ",", "11"}], "]"}], ",", 
+      RowBox[{"Range", "[", 
+       RowBox[{
+        RowBox[{"-", "11"}], ",", "11"}], "]"}]}], "}"}]}], ",", 
+   RowBox[{"GridLinesStyle", "->", 
+    RowBox[{"Directive", "[", 
+     RowBox[{"Gray", ",", "Dashed"}], "]"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.933626395394772*^9, 3.933626411693719*^9}, {
+  3.9336264552542543`*^9, 3.9336264555578537`*^9}, {3.933626513549675*^9, 
+  3.933626520242126*^9}, {3.9336265609752274`*^9, 3.933626581498661*^9}, {
+  3.934838837626556*^9, 3.9348388758518*^9}, {3.934838928323444*^9, 
+  3.934838931901938*^9}, {3.93483981544598*^9, 3.9348398198342733`*^9}, {
+  3.934839852890465*^9, 3.9348399244019203`*^9}, {3.934839959330359*^9, 
+  3.934839961526949*^9}},
+ CellLabel->
+  "In[443]:=",ExpressionUUID->"de03e17a-fca4-4759-83b9-bb0956e8c12d"],
+
+Cell[BoxData[
+ Graphics3DBox[{
+   {RGBColor[0, 0, 1], Thickness[0.01], 
+    Arrow3DBox[{{0, 0, 0}, {0.303023, 1, 0}}], 
+    StyleBox[Text3DBox["\<\"v\"\>", {0.403023, 1.1, 0.1}],
+     StripOnInput->False,
+     FontSize->18,
+     FontWeight->Bold]}, 
+   {RGBColor[1, 0, 0], Thickness[0.01], Arrow3DBox[{{0, 0, 0}, {2, 0, 1}}], 
+    StyleBox[Text3DBox["\<\"b\"\>", {2.1, 0.1, 1.1}],
+     StripOnInput->False,
+     FontSize->18,
+     FontWeight->Bold]}},
+  Axes->True,
+  AxesLabel->{
+    FormBox[
+     StyleBox["\"x\"", FontSize -> 18, StripOnInput -> False], 
+     TraditionalForm], 
+    FormBox[
+     StyleBox["\"y\"", FontSize -> 18, StripOnInput -> False], 
+     TraditionalForm], 
+    FormBox[
+     StyleBox["\"z\"", FontSize -> 18, StripOnInput -> False], 
+     TraditionalForm]},
+  AxesOrigin->{0, 0, 0},
+  FaceGrids->All,
+  ImageSize->{368.0434520469754, 340.4984615089648},
+  ImageSizeRaw->Automatic,
+  PlotRange->{{-4, 4}, {-4, 4}, {-4, 4}},
+  ViewPoint->{-1.5257715477537208`, -1.9010811414282653`, -2.346894049114919},
+  
+  ViewVertical->{
+   0.41064070554612175`, -0.7603344928559423, -0.5032550744126485}]], "Output",\
+
+ CellChangeTimes->{{3.933626446265843*^9, 3.93362645657561*^9}, 
+   3.933626521285614*^9, {3.933626561862011*^9, 3.9336265824408627`*^9}, 
+   3.9348388464491997`*^9, 3.9348388788261414`*^9, 3.934838932965619*^9, 
+   3.9348398216447697`*^9, {3.934839867759603*^9, 3.934839924855125*^9}, 
+   3.934839962339764*^9},
+ CellLabel->
+  "Out[447]=",ExpressionUUID->"726a0f09-92b3-4da3-a2de-2c07a6281c85"],
+
+Cell[BoxData[
+ Graphics3DBox[{
+   {RGBColor[0, 0, 1], Thickness[0.01], 
+    Line3DBox[{{0, 0, 0}, {1.515115, 5, 0}}]}, 
+   {RGBColor[0, 0, 1], Thickness[0.01], 
+    Line3DBox[{{2.303023, 1, 1}, {3.5151149999999998`, 5, 1}}]}, 
+   {RGBColor[0, 0, 1], Thickness[0.01], 
+    Line3DBox[{{0, 0, 0}, {-1.515115, -5, 0}}]}, 
+   {RGBColor[0, 0, 1], Thickness[0.01], 
+    Line3DBox[{{2.303023, 1, 1}, {0.484885, -5, 1}}]}, 
+   {RGBColor[0, 0, 1], Thickness[0.01], 
+    Line3DBox[{{1.515115, 5, 0}, {3.5151149999999998`, 5, 1}}]}, 
+   {RGBColor[0, 0, 1], Thickness[0.01], 
+    Line3DBox[{{-1.515115, -5, 0}, {0.484885, -5, 1}}]}, 
+   {RGBColor[1, 0, 0], Thickness[0.01], Arrow3DBox[{{0, 0, 0}, {2, 0, 1}}], 
+    StyleBox[Text3DBox["\<\"b\"\>", {2.1, 0.1, 1.1}],
+     StripOnInput->False,
+     FontSize->18,
+     FontWeight->Bold]}},
+  Axes->True,
+  AxesLabel->{
+    FormBox[
+     StyleBox["\"x\"", FontSize -> 18, StripOnInput -> False], 
+     TraditionalForm], 
+    FormBox[
+     StyleBox["\"y\"", FontSize -> 18, StripOnInput -> False], 
+     TraditionalForm], 
+    FormBox[
+     StyleBox["\"z\"", FontSize -> 18, StripOnInput -> False], 
+     TraditionalForm]},
+  AxesOrigin->{0, 0, 0},
+  ImageSize->{368.0434520469754, 340.4984615089648},
+  ImageSizeRaw->Automatic,
+  PlotRange->{{-6, 6}, {-6, 6}, {-6, 6}},
+  ViewPoint->{-1.5257715477537208`, -1.9010811414282653`, -2.346894049114919},
+  
+  ViewVertical->{
+   0.41064070554612175`, -0.7603344928559423, -0.5032550744126485}]], "Output",\
+
+ CellChangeTimes->{{3.933626446265843*^9, 3.93362645657561*^9}, 
+   3.933626521285614*^9, {3.933626561862011*^9, 3.9336265824408627`*^9}, 
+   3.9348388464491997`*^9, 3.9348388788261414`*^9, 3.934838932965619*^9, 
+   3.9348398216447697`*^9, {3.934839867759603*^9, 3.934839924855125*^9}, 
+   3.934839962351988*^9},
+ CellLabel->
+  "Out[454]=",ExpressionUUID->"5d1bf498-1333-48cc-86e0-917473c7e67a"],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {RGBColor[0, 0, 1], Thickness[0.01], LineBox[{{0, 0}, {2.727207, 9}}]}, 
+   {RGBColor[0, 0, 1], Thickness[0.01], LineBox[{{0, 0}, {-2.727207, -9}}]}, 
+   {GrayLevel[0.5], Thickness[0.005], DiskBox[{0.303023, 1}, 0.15], 
+    DiskBox[{0.606046, 2}, 0.15], DiskBox[{0.9090689999999999, 3}, 0.15], 
+    DiskBox[{1.212092, 4}, 0.15], DiskBox[{1.515115, 5}, 0.15], 
+    StyleBox[
+     StyleBox[{},
+      FontWeight->Bold],
+     StripOnInput->False,
+     FontSize->18]}},
+  Axes->True,
+  AxesLabel->{
+    FormBox[
+     StyleBox["\"x\"", FontSize -> 18, StripOnInput -> False], 
+     TraditionalForm], 
+    FormBox[
+     StyleBox["\"y\"", FontSize -> 18, StripOnInput -> False], 
+     TraditionalForm]},
+  AxesOrigin->{0, 0},
+  GridLines->{{-11, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5,
+    6, 7, 8, 9, 10, 11}, {-11, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 
+   2, 3, 4, 5, 6, 7, 8, 9, 10, 11}},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5], 
+    Dashing[{Small, Small}]],
+  PlotRange->{{-3, 3}, {-9, 9}}]], "Output",
+ CellChangeTimes->{{3.933626446265843*^9, 3.93362645657561*^9}, 
+   3.933626521285614*^9, {3.933626561862011*^9, 3.9336265824408627`*^9}, 
+   3.9348388464491997`*^9, 3.9348388788261414`*^9, 3.934838932965619*^9, 
+   3.9348398216447697`*^9, {3.934839867759603*^9, 3.934839924855125*^9}, 
+   3.93483996235876*^9},
+ CellLabel->
+  "Out[461]=",ExpressionUUID->"5d8aa5c2-cc70-472a-82ce-52c805f4395a"],
+
+Cell[BoxData[
+ GraphicsBox[
+  {RGBColor[1, 0, 0], Thickness[0.01], LineBox[{{0, 0}, {2, 1}}], 
+   StyleBox[InsetBox["\<\"b\"\>", {2.1, 1.1}],
+    StripOnInput->False,
+    FontSize->18,
+    FontWeight->Bold]},
+  Axes->True,
+  AxesLabel->{
+    FormBox[
+     StyleBox["\"x\"", FontSize -> 18, StripOnInput -> False], 
+     TraditionalForm], 
+    FormBox[
+     StyleBox["\"z\"", FontSize -> 18, StripOnInput -> False], 
+     TraditionalForm]},
+  AxesOrigin->{0, 0},
+  GridLines->{{-11, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5,
+    6, 7, 8, 9, 10, 11}, {-11, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 
+   2, 3, 4, 5, 6, 7, 8, 9, 10, 11}},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5], 
+    Dashing[{Small, Small}]],
+  PlotRange->{{-6, 6}, {-6, 6}}]], "Output",
+ CellChangeTimes->{{3.933626446265843*^9, 3.93362645657561*^9}, 
+   3.933626521285614*^9, {3.933626561862011*^9, 3.9336265824408627`*^9}, 
+   3.9348388464491997`*^9, 3.9348388788261414`*^9, 3.934838932965619*^9, 
+   3.9348398216447697`*^9, {3.934839867759603*^9, 3.934839924855125*^9}, 
+   3.9348399623646917`*^9},
+ CellLabel->
+  "Out[462]=",ExpressionUUID->"9285daee-e285-4bfd-a74b-d216877cca2b"]
+}, Open  ]]
+},
+WindowSize->{1440, 847},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"13.0 for Mac OS X ARM (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"5dc8bbca-d5b2-4bae-b8df-c6d82f1b3c12"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 12161, 373, 514, "Input",ExpressionUUID->"de03e17a-fca4-4759-83b9-bb0956e8c12d"],
+Cell[12744, 397, 1526, 40, 357, "Output",ExpressionUUID->"726a0f09-92b3-4da3-a2de-2c07a6281c85"],
+Cell[14273, 439, 1879, 45, 357, "Output",ExpressionUUID->"5d1bf498-1333-48cc-86e0-917473c7e67a"],
+Cell[16155, 486, 1464, 34, 449, "Output",ExpressionUUID->"5d8aa5c2-cc70-472a-82ce-52c805f4395a"],
+Cell[17622, 522, 1179, 29, 411, "Output",ExpressionUUID->"9285daee-e285-4bfd-a74b-d216877cca2b"]
+}, Open  ]]
+}
+]
+*)
+

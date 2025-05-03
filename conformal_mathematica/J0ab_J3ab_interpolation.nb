@@ -1,0 +1,746 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     31042,        738]
+NotebookOptionsPosition[     29757,        711]
+NotebookOutlinePosition[     30154,        727]
+CellTagsIndexPosition[     30111,        724]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"J0ab", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"-", "d"}], ",", " ", 
+       RowBox[{
+        RowBox[{"-", "kk0"}], "/", 
+        RowBox[{"Sqrt", "[", "2", "]"}]}]}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"d", ",", "0", ",", 
+       RowBox[{"P0", "/", 
+        RowBox[{"Sqrt", "[", "2", "]"}]}]}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"kk0", "/", 
+        RowBox[{"Sqrt", "[", "2", "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"-", "P0"}], "/", 
+        RowBox[{"Sqrt", "[", "2", "]"}]}], ",", "0"}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"J3ab", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "K3", ",", " ", 
+       RowBox[{"kk3", "/", 
+        RowBox[{"Sqrt", "[", "2", "]"}]}]}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "K3"}], ",", "0", ",", 
+       RowBox[{"P3", "/", 
+        RowBox[{"Sqrt", "[", "2", "]"}]}]}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "kk3"}], "/", 
+        RowBox[{"Sqrt", "[", "2", "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"-", "P3"}], "/", 
+        RowBox[{"Sqrt", "[", "2", "]"}]}], ",", "0"}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"gab", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"-", "1"}], ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "1"}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CommutationJ0J0", "[", 
+   RowBox[{"a_", ",", " ", "b_", ",", " ", "c_", ",", " ", "d_"}], "]"}], ":=",
+   " ", 
+  RowBox[{"(", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<[\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+SuperscriptBox[
+StyleBox[\"J\", \"TI\"], \"0\"], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"J^{0}\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)\>\"", ",", "a", ",", "b", ",", 
+      "\"\<, \!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+SuperscriptBox[
+StyleBox[\"J\", \"TI\"], \"0\"], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"J^{0}\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)\>\"", ",", "c", ",", "d", ",", 
+      "\"\<]=-i(g\>\"", ",", "b", ",", "d", ",", 
+      "\"\< \!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+SuperscriptBox[
+StyleBox[\"J\", \"TI\"], \"0\"], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"J^{0}\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)\>\"", ",", "a", ",", "c", ",", 
+      "\"\< - g\>\"", ",", "b", ",", "c", ",", 
+      "\"\< \!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+SuperscriptBox[
+StyleBox[\"J\", \"TI\"], \"0\"], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"J^{0}\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)\>\"", ",", "a", ",", "d", ",", 
+      "\"\< + g\>\"", ",", "a", ",", "c", ",", 
+      "\"\< \!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+SuperscriptBox[
+StyleBox[\"J\", \"TI\"], \"0\"], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"J^{0}\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)\>\"", ",", "b", ",", "d", ",", 
+      "\"\< - g\>\"", ",", "a", ",", "d", ",", 
+      "\"\< \!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+SuperscriptBox[
+StyleBox[\"J\", \"TI\"], \"0\"], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"J^{0}\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)\>\"", ",", "b", ",", "c", ",", 
+      "\"\<)\>\""}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<[\>\"", ",", 
+      RowBox[{"J0ab", "[", 
+       RowBox[{"[", 
+        RowBox[{"a", ",", " ", "b"}], "]"}], "]"}], ",", "\"\<,\>\"", ",", 
+      RowBox[{"J0ab", "[", 
+       RowBox[{"[", 
+        RowBox[{"c", ",", " ", "d"}], "]"}], "]"}], ",", "\"\<] = \>\"", ",", 
+      " ", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"-", "\[ImaginaryI]"}], ")"}], 
+       RowBox[{"gab", "[", 
+        RowBox[{"[", 
+         RowBox[{"b", ",", "d"}], "]"}], "]"}], "*", 
+       RowBox[{"J0ab", "[", 
+        RowBox[{"[", 
+         RowBox[{"a", ",", "c"}], "]"}], "]"}]}], ",", "\"\< \>\"", ",", 
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"(", 
+         RowBox[{"-", "\[ImaginaryI]"}], ")"}]}], " ", 
+       RowBox[{"gab", "[", 
+        RowBox[{"[", 
+         RowBox[{"b", ",", "c"}], "]"}], "]"}], "*", 
+       RowBox[{"J0ab", "[", 
+        RowBox[{"[", 
+         RowBox[{"a", ",", "d"}], "]"}], "]"}]}], ",", "\"\< \>\"", ",", 
+      RowBox[{
+       RowBox[{"+", 
+        RowBox[{"(", 
+         RowBox[{"-", "\[ImaginaryI]"}], ")"}]}], " ", 
+       RowBox[{"gab", "[", 
+        RowBox[{"[", 
+         RowBox[{"a", ",", "c"}], "]"}], "]"}], "*", 
+       RowBox[{"J0ab", "[", 
+        RowBox[{"[", 
+         RowBox[{"b", ",", "d"}], "]"}], "]"}]}], ",", "\"\< \>\"", ",", 
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"(", 
+         RowBox[{"-", "\[ImaginaryI]"}], ")"}]}], " ", 
+       RowBox[{"gab", "[", 
+        RowBox[{"[", 
+         RowBox[{"a", ",", "d"}], "]"}], "]"}], "*", 
+       RowBox[{"J0ab", "[", 
+        RowBox[{"[", 
+         RowBox[{"b", ",", "c"}], "]"}], "]"}]}]}], "]"}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<[\>\"", ",", 
+      RowBox[{"J0ab", "[", 
+       RowBox[{"[", 
+        RowBox[{"a", ",", " ", "b"}], "]"}], "]"}], ",", "\"\<,\>\"", ",", 
+      RowBox[{"J0ab", "[", 
+       RowBox[{"[", 
+        RowBox[{"c", ",", " ", "d"}], "]"}], "]"}], ",", "\"\<] = \>\"", ",", 
+      " ", 
+      RowBox[{
+       RowBox[{"-", "\[ImaginaryI]"}], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"gab", "[", 
+           RowBox[{"[", 
+            RowBox[{"b", ",", "d"}], "]"}], "]"}], "*", 
+          RowBox[{"J0ab", "[", 
+           RowBox[{"[", 
+            RowBox[{"a", ",", "c"}], "]"}], "]"}]}], "-", 
+         RowBox[{
+          RowBox[{"gab", "[", 
+           RowBox[{"[", 
+            RowBox[{"b", ",", "c"}], "]"}], "]"}], "*", 
+          RowBox[{"J0ab", "[", 
+           RowBox[{"[", 
+            RowBox[{"a", ",", "d"}], "]"}], "]"}]}], "+", " ", 
+         RowBox[{
+          RowBox[{"gab", "[", 
+           RowBox[{"[", 
+            RowBox[{"a", ",", "c"}], "]"}], "]"}], "*", 
+          RowBox[{"J0ab", "[", 
+           RowBox[{"[", 
+            RowBox[{"b", ",", "d"}], "]"}], "]"}]}], "-", " ", 
+         RowBox[{
+          RowBox[{"gab", "[", 
+           RowBox[{"[", 
+            RowBox[{"a", ",", "d"}], "]"}], "]"}], "*", 
+          RowBox[{"J0ab", "[", 
+           RowBox[{"[", 
+            RowBox[{"b", ",", "c"}], "]"}], "]"}]}]}], ")"}]}]}], "]"}], 
+    ";"}], "\[IndentingNewLine]", ")"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CommutationJ3J3", "[", 
+   RowBox[{"a_", ",", " ", "b_", ",", " ", "c_", ",", " ", "d_"}], "]"}], ":=",
+   " ", 
+  RowBox[{"(", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<[\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+SuperscriptBox[
+StyleBox[\"J\", \"TI\"], \"3\"], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"J^{3}\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)\>\"", ",", "a", ",", "b", ",", 
+      "\"\<, \!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+SuperscriptBox[
+StyleBox[\"J\", \"TI\"], \"3\"], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"J^{3}\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)\>\"", ",", "c", ",", "d", ",", 
+      "\"\<]=-i(g\>\"", ",", "b", ",", "d", ",", 
+      "\"\< \!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+SuperscriptBox[
+StyleBox[\"J\", \"TI\"], \"0\"], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"J^{0}\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)\>\"", ",", "a", ",", "c", ",", 
+      "\"\< - g\>\"", ",", "b", ",", "c", ",", 
+      "\"\< \!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+SuperscriptBox[
+StyleBox[\"J\", \"TI\"], \"0\"], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"J^{0}\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)\>\"", ",", "a", ",", "d", ",", 
+      "\"\< + g\>\"", ",", "a", ",", "c", ",", 
+      "\"\< \!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+SuperscriptBox[
+StyleBox[\"J\", \"TI\"], \"0\"], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"J^{0}\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)\>\"", ",", "b", ",", "d", ",", 
+      "\"\< - g\>\"", ",", "a", ",", "d", ",", 
+      "\"\< \!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+SuperscriptBox[
+StyleBox[\"J\", \"TI\"], \"0\"], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"J^{0}\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)\>\"", ",", "b", ",", "c", ",", 
+      "\"\<)\>\""}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<[\>\"", ",", 
+      RowBox[{"J3ab", "[", 
+       RowBox[{"[", 
+        RowBox[{"a", ",", " ", "b"}], "]"}], "]"}], ",", "\"\<,\>\"", ",", 
+      RowBox[{"J3ab", "[", 
+       RowBox[{"[", 
+        RowBox[{"c", ",", " ", "d"}], "]"}], "]"}], ",", "\"\<] = \>\"", ",", 
+      " ", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"-", "\[ImaginaryI]"}], ")"}], 
+       RowBox[{"gab", "[", 
+        RowBox[{"[", 
+         RowBox[{"b", ",", "d"}], "]"}], "]"}], "*", 
+       RowBox[{"J0ab", "[", 
+        RowBox[{"[", 
+         RowBox[{"a", ",", "c"}], "]"}], "]"}]}], ",", "\"\< \>\"", ",", 
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"(", 
+         RowBox[{"-", "\[ImaginaryI]"}], ")"}]}], " ", 
+       RowBox[{"gab", "[", 
+        RowBox[{"[", 
+         RowBox[{"b", ",", "c"}], "]"}], "]"}], "*", 
+       RowBox[{"J0ab", "[", 
+        RowBox[{"[", 
+         RowBox[{"a", ",", "d"}], "]"}], "]"}]}], ",", "\"\< \>\"", ",", 
+      RowBox[{
+       RowBox[{"+", 
+        RowBox[{"(", 
+         RowBox[{"-", "\[ImaginaryI]"}], ")"}]}], " ", 
+       RowBox[{"gab", "[", 
+        RowBox[{"[", 
+         RowBox[{"a", ",", "c"}], "]"}], "]"}], "*", 
+       RowBox[{"J0ab", "[", 
+        RowBox[{"[", 
+         RowBox[{"b", ",", "d"}], "]"}], "]"}]}], ",", "\"\< \>\"", ",", 
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"(", 
+         RowBox[{"-", "\[ImaginaryI]"}], ")"}]}], " ", 
+       RowBox[{"gab", "[", 
+        RowBox[{"[", 
+         RowBox[{"a", ",", "d"}], "]"}], "]"}], "*", 
+       RowBox[{"J0ab", "[", 
+        RowBox[{"[", 
+         RowBox[{"b", ",", "c"}], "]"}], "]"}]}]}], "]"}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<[\>\"", ",", 
+      RowBox[{"J3ab", "[", 
+       RowBox[{"[", 
+        RowBox[{"a", ",", " ", "b"}], "]"}], "]"}], ",", "\"\<,\>\"", ",", 
+      RowBox[{"J3ab", "[", 
+       RowBox[{"[", 
+        RowBox[{"c", ",", " ", "d"}], "]"}], "]"}], ",", "\"\<] = \>\"", ",", 
+      " ", 
+      RowBox[{
+       RowBox[{"-", "\[ImaginaryI]"}], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"gab", "[", 
+           RowBox[{"[", 
+            RowBox[{"b", ",", "d"}], "]"}], "]"}], "*", 
+          RowBox[{"J0ab", "[", 
+           RowBox[{"[", 
+            RowBox[{"a", ",", "c"}], "]"}], "]"}]}], "-", 
+         RowBox[{
+          RowBox[{"gab", "[", 
+           RowBox[{"[", 
+            RowBox[{"b", ",", "c"}], "]"}], "]"}], "*", 
+          RowBox[{"J0ab", "[", 
+           RowBox[{"[", 
+            RowBox[{"a", ",", "d"}], "]"}], "]"}]}], "+", " ", 
+         RowBox[{
+          RowBox[{"gab", "[", 
+           RowBox[{"[", 
+            RowBox[{"a", ",", "c"}], "]"}], "]"}], "*", 
+          RowBox[{"J0ab", "[", 
+           RowBox[{"[", 
+            RowBox[{"b", ",", "d"}], "]"}], "]"}]}], "-", " ", 
+         RowBox[{
+          RowBox[{"gab", "[", 
+           RowBox[{"[", 
+            RowBox[{"a", ",", "d"}], "]"}], "]"}], "*", 
+          RowBox[{"J0ab", "[", 
+           RowBox[{"[", 
+            RowBox[{"b", ",", "c"}], "]"}], "]"}]}]}], ")"}]}]}], "]"}], 
+    ";"}], "\[IndentingNewLine]", ")"}]}], "\[IndentingNewLine]", 
+ RowBox[{"J0ab", "//", "MatrixForm"}], "\[IndentingNewLine]", 
+ RowBox[{"J3ab", "//", "MatrixForm"}], "\[IndentingNewLine]", 
+ RowBox[{"gab", "//", "MatrixForm"}], "\[IndentingNewLine]", 
+ RowBox[{"CommutationJ0J0", "[", 
+  RowBox[{"1", ",", "2", ",", "2", ",", "3"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"CommutationJ3J3", "[", 
+  RowBox[{"2", ",", "3", ",", "3", ",", "1"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.948405154137134*^9, 3.948405551516795*^9}, {
+  3.948405606115465*^9, 3.948405619972595*^9}, {3.9484056512374573`*^9, 
+  3.948405681677384*^9}, {3.948405719618832*^9, 3.948405754216893*^9}, {
+  3.948405892208334*^9, 3.9484058922978687`*^9}, {3.948406078990161*^9, 
+  3.9484060817014723`*^9}, {3.9484061501044064`*^9, 3.948406186328328*^9}, {
+  3.9484062313831453`*^9, 3.948406256935101*^9}},
+ CellLabel->
+  "In[129]:=",ExpressionUUID->"49830c67-30b4-4ab9-bdf0-d29230547563"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", 
+      RowBox[{"-", "d"}], 
+      RowBox[{"-", 
+       FractionBox["kk0", 
+        SqrtBox["2"]]}]},
+     {"d", "0", 
+      FractionBox["P0", 
+       SqrtBox["2"]]},
+     {
+      FractionBox["kk0", 
+       SqrtBox["2"]], 
+      RowBox[{"-", 
+       FractionBox["P0", 
+        SqrtBox["2"]]}], "0"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.9484052704061937`*^9, 3.9484052764822187`*^9}, 
+   3.948405316477989*^9, {3.9484053693803177`*^9, 3.948405373656447*^9}, 
+   3.94840555231668*^9, 3.948405682584467*^9, 3.948405720273211*^9, 
+   3.948405850939776*^9, 3.948405892861677*^9, 3.948406082611066*^9, {
+   3.948406160604052*^9, 3.9484061867769327`*^9}, {3.948406238473052*^9, 
+   3.948406257470532*^9}},
+ CellLabel->
+  "Out[134]//MatrixForm=",ExpressionUUID->"e0870839-9cc8-4564-b435-\
+7eca9581b929"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", "K3", 
+      FractionBox["kk3", 
+       SqrtBox["2"]]},
+     {
+      RowBox[{"-", "K3"}], "0", 
+      FractionBox["P3", 
+       SqrtBox["2"]]},
+     {
+      RowBox[{"-", 
+       FractionBox["kk3", 
+        SqrtBox["2"]]}], 
+      RowBox[{"-", 
+       FractionBox["P3", 
+        SqrtBox["2"]]}], "0"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.9484052704061937`*^9, 3.9484052764822187`*^9}, 
+   3.948405316477989*^9, {3.9484053693803177`*^9, 3.948405373656447*^9}, 
+   3.94840555231668*^9, 3.948405682584467*^9, 3.948405720273211*^9, 
+   3.948405850939776*^9, 3.948405892861677*^9, 3.948406082611066*^9, {
+   3.948406160604052*^9, 3.9484061867769327`*^9}, {3.948406238473052*^9, 
+   3.94840625747311*^9}},
+ CellLabel->
+  "Out[135]//MatrixForm=",ExpressionUUID->"20d9e49c-754b-4884-94e3-\
+121f211abd23"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", 
+      RowBox[{"-", "1"}], "0"},
+     {
+      RowBox[{"-", "1"}], "0", "0"},
+     {"0", "0", "1"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.9484052704061937`*^9, 3.9484052764822187`*^9}, 
+   3.948405316477989*^9, {3.9484053693803177`*^9, 3.948405373656447*^9}, 
+   3.94840555231668*^9, 3.948405682584467*^9, 3.948405720273211*^9, 
+   3.948405850939776*^9, 3.948405892861677*^9, 3.948406082611066*^9, {
+   3.948406160604052*^9, 3.9484061867769327`*^9}, {3.948406238473052*^9, 
+   3.948406257474793*^9}},
+ CellLabel->
+  "Out[136]//MatrixForm=",ExpressionUUID->"9b316592-161b-46da-aed1-\
+9113b3746826"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"[\\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[SuperscriptBox[StyleBox[\\\"J\\\", \\\"TI\\\"], \\\"0\\\"], \
+TraditionalForm], \\\"errors\\\" -> {}, \\\"input\\\" -> \\\"J^{0}\\\", \
+\\\"state\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\)\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\", \\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[SuperscriptBox[StyleBox[\\\"J\\\", \\\"TI\\\"], \\\"0\\\"], \
+TraditionalForm], \\\"errors\\\" -> {}, \\\"input\\\" -> \\\"J^{0}\\\", \
+\\\"state\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\)\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\"]=-i(g\"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\" \\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[SuperscriptBox[StyleBox[\\\"J\\\", \\\"TI\\\"], \\\"0\\\"], \
+TraditionalForm], \\\"errors\\\" -> {}, \\\"input\\\" -> \\\"J^{0}\\\", \
+\\\"state\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\)\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\" - g\"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\" \\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[SuperscriptBox[StyleBox[\\\"J\\\", \\\"TI\\\"], \\\"0\\\"], \
+TraditionalForm], \\\"errors\\\" -> {}, \\\"input\\\" -> \\\"J^{0}\\\", \
+\\\"state\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\)\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\" + g\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\" \\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[SuperscriptBox[StyleBox[\\\"J\\\", \\\"TI\\\"], \\\"0\\\"], \
+TraditionalForm], \\\"errors\\\" -> {}, \\\"input\\\" -> \\\"J^{0}\\\", \
+\\\"state\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\)\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\" - g\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\" \\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[SuperscriptBox[StyleBox[\\\"J\\\", \\\"TI\\\"], \\\"0\\\"], \
+TraditionalForm], \\\"errors\\\" -> {}, \\\"input\\\" -> \\\"J^{0}\\\", \
+\\\"state\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\)\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\")\"\>"}],
+  SequenceForm[
+  "[\!\(\*TemplateBox[<|\"boxes\" -> FormBox[SuperscriptBox[StyleBox[\"J\", \
+\"TI\"], \"0\"], TraditionalForm], \"errors\" -> {}, \"input\" -> \"J^{0}\", \
+\"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 1, 2, 
+   ", \!\(\*TemplateBox[<|\"boxes\" -> FormBox[SuperscriptBox[StyleBox[\"J\", \
+\"TI\"], \"0\"], TraditionalForm], \"errors\" -> {}, \"input\" -> \"J^{0}\", \
+\"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 2, 3, "]=-i(g", 2, 3, 
+   " \!\(\*TemplateBox[<|\"boxes\" -> FormBox[SuperscriptBox[StyleBox[\"J\", \
+\"TI\"], \"0\"], TraditionalForm], \"errors\" -> {}, \"input\" -> \"J^{0}\", \
+\"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 1, 2, " - g", 2, 2, 
+   " \!\(\*TemplateBox[<|\"boxes\" -> FormBox[SuperscriptBox[StyleBox[\"J\", \
+\"TI\"], \"0\"], TraditionalForm], \"errors\" -> {}, \"input\" -> \"J^{0}\", \
+\"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 1, 3, " + g", 1, 2, 
+   " \!\(\*TemplateBox[<|\"boxes\" -> FormBox[SuperscriptBox[StyleBox[\"J\", \
+\"TI\"], \"0\"], TraditionalForm], \"errors\" -> {}, \"input\" -> \"J^{0}\", \
+\"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 2, 3, " - g", 1, 3, 
+   " \!\(\*TemplateBox[<|\"boxes\" -> FormBox[SuperscriptBox[StyleBox[\"J\", \
+\"TI\"], \"0\"], TraditionalForm], \"errors\" -> {}, \"input\" -> \"J^{0}\", \
+\"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 2, 2, ")"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.948405552322433*^9, 3.948405682590081*^9, 3.948405720276041*^9, 
+   3.94840585094287*^9, 3.948405892864954*^9, 3.9484060826171913`*^9, {
+   3.948406160609666*^9, 3.948406186781378*^9}, {3.9484062384782476`*^9, 
+   3.948406257476409*^9}},
+ CellLabel->
+  "During evaluation of \
+In[129]:=",ExpressionUUID->"903e5dbd-aaa9-405f-b81e-929a738cffe3"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"[\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "d"}], "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   
+   FractionBox["P0", 
+    SqrtBox["2"]], "\[InvisibleSpace]", "\<\"] = \"\>", "\[InvisibleSpace]", 
+   "0", "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   FractionBox[
+    RowBox[{"\[ImaginaryI]", " ", "P0"}], 
+    SqrtBox["2"]], "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   "0"}],
+  SequenceForm[
+  "[", -$CellContext`d, ",", 2^Rational[-1, 2] $CellContext`P0, "] = ", 0, 
+   " ", 0, " ", Complex[0, 1] 2^Rational[-1, 2] $CellContext`P0, " ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.948405552322433*^9, 3.948405682590081*^9, 3.948405720276041*^9, 
+   3.94840585094287*^9, 3.948405892864954*^9, 3.9484060826171913`*^9, {
+   3.948406160609666*^9, 3.948406186781378*^9}, {3.9484062384782476`*^9, 
+   3.94840625748841*^9}},
+ CellLabel->
+  "During evaluation of \
+In[129]:=",ExpressionUUID->"ae1acd2f-f7f4-44db-be53-d46092b07428"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"[\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "d"}], "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   
+   FractionBox["P0", 
+    SqrtBox["2"]], "\[InvisibleSpace]", "\<\"] = \"\>", "\[InvisibleSpace]", 
+   FractionBox[
+    RowBox[{"\[ImaginaryI]", " ", "P0"}], 
+    SqrtBox["2"]]}],
+  SequenceForm[
+  "[", -$CellContext`d, ",", 2^Rational[-1, 2] $CellContext`P0, "] = ", 
+   Complex[0, 1] 2^Rational[-1, 2] $CellContext`P0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.948405552322433*^9, 3.948405682590081*^9, 3.948405720276041*^9, 
+   3.94840585094287*^9, 3.948405892864954*^9, 3.9484060826171913`*^9, {
+   3.948406160609666*^9, 3.948406186781378*^9}, {3.9484062384782476`*^9, 
+   3.9484062574897337`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[129]:=",ExpressionUUID->"c4da2bd7-85eb-42ae-b4e6-bbc8311c1c40"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"[\\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[SuperscriptBox[StyleBox[\\\"J\\\", \\\"TI\\\"], \\\"3\\\"], \
+TraditionalForm], \\\"errors\\\" -> {}, \\\"input\\\" -> \\\"J^{3}\\\", \
+\\\"state\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\)\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\", \\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[SuperscriptBox[StyleBox[\\\"J\\\", \\\"TI\\\"], \\\"3\\\"], \
+TraditionalForm], \\\"errors\\\" -> {}, \\\"input\\\" -> \\\"J^{3}\\\", \
+\\\"state\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\)\"\>", 
+   "\[InvisibleSpace]", "3", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\"]=-i(g\"\>", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" \\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[SuperscriptBox[StyleBox[\\\"J\\\", \\\"TI\\\"], \\\"0\\\"], \
+TraditionalForm], \\\"errors\\\" -> {}, \\\"input\\\" -> \\\"J^{0}\\\", \
+\\\"state\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\)\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\" - g\"\>", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\" \\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[SuperscriptBox[StyleBox[\\\"J\\\", \\\"TI\\\"], \\\"0\\\"], \
+TraditionalForm], \\\"errors\\\" -> {}, \\\"input\\\" -> \\\"J^{0}\\\", \
+\\\"state\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\)\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" + g\"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\" \\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[SuperscriptBox[StyleBox[\\\"J\\\", \\\"TI\\\"], \\\"0\\\"], \
+TraditionalForm], \\\"errors\\\" -> {}, \\\"input\\\" -> \\\"J^{0}\\\", \
+\\\"state\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\)\"\>", 
+   "\[InvisibleSpace]", "3", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" - g\"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" \\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[SuperscriptBox[StyleBox[\\\"J\\\", \\\"TI\\\"], \\\"0\\\"], \
+TraditionalForm], \\\"errors\\\" -> {}, \\\"input\\\" -> \\\"J^{0}\\\", \
+\\\"state\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\)\"\>", 
+   "\[InvisibleSpace]", "3", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\")\"\>"}],
+  SequenceForm[
+  "[\!\(\*TemplateBox[<|\"boxes\" -> FormBox[SuperscriptBox[StyleBox[\"J\", \
+\"TI\"], \"3\"], TraditionalForm], \"errors\" -> {}, \"input\" -> \"J^{3}\", \
+\"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 2, 3, 
+   ", \!\(\*TemplateBox[<|\"boxes\" -> FormBox[SuperscriptBox[StyleBox[\"J\", \
+\"TI\"], \"3\"], TraditionalForm], \"errors\" -> {}, \"input\" -> \"J^{3}\", \
+\"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 3, 1, "]=-i(g", 3, 1, 
+   " \!\(\*TemplateBox[<|\"boxes\" -> FormBox[SuperscriptBox[StyleBox[\"J\", \
+\"TI\"], \"0\"], TraditionalForm], \"errors\" -> {}, \"input\" -> \"J^{0}\", \
+\"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 2, 3, " - g", 3, 3, 
+   " \!\(\*TemplateBox[<|\"boxes\" -> FormBox[SuperscriptBox[StyleBox[\"J\", \
+\"TI\"], \"0\"], TraditionalForm], \"errors\" -> {}, \"input\" -> \"J^{0}\", \
+\"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 2, 1, " + g", 2, 3, 
+   " \!\(\*TemplateBox[<|\"boxes\" -> FormBox[SuperscriptBox[StyleBox[\"J\", \
+\"TI\"], \"0\"], TraditionalForm], \"errors\" -> {}, \"input\" -> \"J^{0}\", \
+\"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 3, 1, " - g", 2, 1, 
+   " \!\(\*TemplateBox[<|\"boxes\" -> FormBox[SuperscriptBox[StyleBox[\"J\", \
+\"TI\"], \"0\"], TraditionalForm], \"errors\" -> {}, \"input\" -> \"J^{0}\", \
+\"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 3, 3, ")"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.948405552322433*^9, 3.948405682590081*^9, 3.948405720276041*^9, 
+   3.94840585094287*^9, 3.948405892864954*^9, 3.9484060826171913`*^9, {
+   3.948406160609666*^9, 3.948406186781378*^9}, {3.9484062384782476`*^9, 
+   3.948406257490415*^9}},
+ CellLabel->
+  "During evaluation of \
+In[129]:=",ExpressionUUID->"25069306-f0c0-4765-a03b-816448e661c1"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"[\"\>", "\[InvisibleSpace]", 
+   FractionBox["P3", 
+    SqrtBox["2"]], "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", 
+    FractionBox["kk3", 
+     SqrtBox["2"]]}], "\[InvisibleSpace]", "\<\"] = \"\>", 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "\<\" \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"\[ImaginaryI]", " ", "d"}], "\[InvisibleSpace]", "\<\" \"\>", 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "\<\" \"\>", 
+   "\[InvisibleSpace]", "0"}],
+  SequenceForm[
+  "[", 2^Rational[-1, 2] $CellContext`P3, 
+   ",", -2^Rational[-1, 2] $CellContext`kk3, "] = ", 0, " ", 
+   Complex[0, 1] $CellContext`d, " ", 0, " ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.948405552322433*^9, 3.948405682590081*^9, 3.948405720276041*^9, 
+   3.94840585094287*^9, 3.948405892864954*^9, 3.9484060826171913`*^9, {
+   3.948406160609666*^9, 3.948406186781378*^9}, {3.9484062384782476`*^9, 
+   3.948406257497898*^9}},
+ CellLabel->
+  "During evaluation of \
+In[129]:=",ExpressionUUID->"da1ced5c-738d-4e39-8750-4d63c9204d78"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"[\"\>", "\[InvisibleSpace]", 
+   FractionBox["P3", 
+    SqrtBox["2"]], "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", 
+    FractionBox["kk3", 
+     SqrtBox["2"]]}], "\[InvisibleSpace]", "\<\"] = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"\[ImaginaryI]", " ", "d"}]}],
+  SequenceForm[
+  "[", 2^Rational[-1, 2] $CellContext`P3, 
+   ",", -2^Rational[-1, 2] $CellContext`kk3, "] = ", 
+   Complex[0, 1] $CellContext`d],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.948405552322433*^9, 3.948405682590081*^9, 3.948405720276041*^9, 
+   3.94840585094287*^9, 3.948405892864954*^9, 3.9484060826171913`*^9, {
+   3.948406160609666*^9, 3.948406186781378*^9}, {3.9484062384782476`*^9, 
+   3.948406257498682*^9}},
+ CellLabel->
+  "During evaluation of \
+In[129]:=",ExpressionUUID->"798a2bc0-69c5-4e91-9379-2acccab689bd"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 747},
+WindowMargins->{{142, Automatic}, {15, Automatic}},
+FrontEndVersion->"13.0 for Mac OS X ARM (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"bbc471fc-a9fb-4a06-a10f-a1c4580ae0a2"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 12976, 338, 616, "Input",ExpressionUUID->"49830c67-30b4-4ab9-bdf0-d29230547563"],
+Cell[13559, 362, 1240, 36, 108, "Output",ExpressionUUID->"e0870839-9cc8-4564-b435-7eca9581b929"],
+Cell[14802, 400, 1241, 36, 108, "Output",ExpressionUUID->"20d9e49c-754b-4884-94e3-121f211abd23"],
+Cell[16046, 438, 1040, 27, 76, "Output",ExpressionUUID->"9b316592-161b-46da-aed1-9113b3746826"],
+Cell[CellGroupData[{
+Cell[17111, 469, 4316, 68, 26, "Print",ExpressionUUID->"903e5dbd-aaa9-405f-b81e-929a738cffe3"],
+Cell[21430, 539, 1096, 24, 43, "Print",ExpressionUUID->"ae1acd2f-f7f4-44db-be53-d46092b07428"],
+Cell[22529, 565, 883, 21, 43, "Print",ExpressionUUID->"c4da2bd7-85eb-42ae-b4e6-bbc8311c1c40"],
+Cell[23415, 588, 4316, 68, 26, "Print",ExpressionUUID->"25069306-f0c0-4765-a03b-816448e661c1"],
+Cell[27734, 658, 1104, 25, 44, "Print",ExpressionUUID->"da1ced5c-738d-4e39-8750-4d63c9204d78"],
+Cell[28841, 685, 888, 22, 44, "Print",ExpressionUUID->"798a2bc0-69c5-4e91-9379-2acccab689bd"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,293 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9812,        285]
+NotebookOptionsPosition[      9240,        267]
+NotebookOutlinePosition[      9636,        283]
+CellTagsIndexPosition[      9593,        280]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"xis", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", "1", "}"}], ",", 
+     RowBox[{"{", "0", "}"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"xispdagg", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "0"}], "}"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sigma1", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0"}], "}"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sigma2", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"-", "\[ImaginaryI]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[ImaginaryI]", ",", "0"}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sigma3", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"-", "1"}]}], "}"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"II", " ", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Ngamma2", " ", "=", " ", 
+   RowBox[{"xispdagg", ".", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"sigma3", " ", "pp3"}], "+", 
+          RowBox[{"EPP3", " ", "II"}], "+", 
+          RowBox[{"MN", " ", "II"}]}], ")"}], ".", "sigma1", ".", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"sigma3", " ", "p3"}], "+", 
+          RowBox[{"EP3", " ", "II"}], "+", 
+          RowBox[{"MN", " ", "II"}]}], ")"}]}], ")"}], "+", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "sigma3"}], " ", "pp3"}], "+", 
+          RowBox[{"EPP3", " ", "II"}], "+", 
+          RowBox[{"MN", " ", "II"}]}], ")"}], ".", "sigma1", ".", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "sigma3"}], " ", "p3"}], "+", 
+          RowBox[{"EP3", " ", "II"}], "+", 
+          RowBox[{"MN", " ", "II"}]}], ")"}]}], ")"}]}], ")"}], ".", 
+    "xis"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Ngamma2old", " ", "=", " ", 
+   RowBox[{"xispdagg", ".", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"sigma1", " ", "pp1"}], "+", 
+          RowBox[{"EPP1", " ", "II"}], "+", 
+          RowBox[{"MN", " ", "II"}]}], ")"}], ".", "sigma3", ".", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"sigma1", " ", "p1"}], "+", 
+          RowBox[{"EP1", " ", "II"}], "+", 
+          RowBox[{"MN", " ", "II"}]}], ")"}]}], ")"}], "+", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "sigma1"}], " ", "pp1"}], "+", 
+          RowBox[{"EPP1", " ", "II"}], "+", 
+          RowBox[{"MN", " ", "II"}]}], ")"}], ".", "sigma3", ".", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "sigma1"}], " ", "p1"}], "+", 
+          RowBox[{"EP1", " ", "II"}], "+", 
+          RowBox[{"MN", " ", "II"}]}], ")"}]}], ")"}]}], ")"}], ".", 
+    "xis"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Ngamma1second", " ", "=", " ", 
+   RowBox[{"xispdagg", ".", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "sigma3"}], " ", "pp3"}], "+", 
+          RowBox[{"MN", " ", "II"}]}], ")"}], ".", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"sigma3", " ", "p3"}], "+", 
+          RowBox[{"MN", " ", "II"}]}], ")"}]}], ")"}], "+", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"sigma3", " ", "pp3"}], "+", 
+          RowBox[{"MN", " ", "II"}]}], ")"}], ".", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "sigma3"}], " ", "p3"}], "+", 
+          RowBox[{"MN", " ", "II"}]}], ")"}]}], ")"}]}], ")"}], ".", 
+    "xis"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"NgammaPeskin", " ", "=", " ", 
+   RowBox[{"xispdagg", ".", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"MatrixPower", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"pp3", " ", "sigma1"}], " ", "+", " ", 
+           RowBox[{"EPP3", " ", "II"}]}], ",", 
+          RowBox[{"1", "/", "2"}]}], "]"}], ".", "sigma1", ".", 
+        RowBox[{"MatrixPower", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"p3", " ", "sigma1"}], " ", "+", " ", 
+           RowBox[{"EP3", " ", "II"}]}], ",", 
+          RowBox[{"1", "/", "2"}]}], "]"}]}], ")"}], "-", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"MatrixPower", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "pp3"}], " ", "sigma1"}], " ", "+", " ", 
+           RowBox[{"EPP3", " ", "II"}]}], ",", 
+          RowBox[{"1", "/", "2"}]}], "]"}], ".", "sigma1", ".", 
+        RowBox[{"MatrixPower", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "p3"}], " ", "sigma1"}], " ", "+", " ", 
+           RowBox[{"EP3", " ", "II"}]}], ",", 
+          RowBox[{"1", "/", "2"}]}], "]"}]}], ")"}]}], ")"}], ".", "xis"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"NgammaPeskin", "//", "MatrixForm"}], "//", 
+  "FullSimplify"}]}], "Input",
+ CellChangeTimes->{{3.914590707259755*^9, 3.9145907738734417`*^9}, {
+   3.9145908222208557`*^9, 3.914590970477627*^9}, {3.91459101131852*^9, 
+   3.9145912279688873`*^9}, {3.9145912857398167`*^9, 3.914591292900887*^9}, {
+   3.914591326474717*^9, 3.914591376153657*^9}, {3.914591706421362*^9, 
+   3.914591709494432*^9}, {3.914593037966628*^9, 3.914593040349536*^9}, {
+   3.914593469988577*^9, 3.9145934755801497`*^9}, {3.914593618516461*^9, 
+   3.914593633227482*^9}, {3.914593690289236*^9, 3.914593713086423*^9}, 
+   3.914593746361374*^9, {3.914603201775114*^9, 3.9146032244256973`*^9}, {
+   3.91485662318217*^9, 3.914856765909317*^9}, {3.914856800504827*^9, 
+   3.914856811829197*^9}, {3.9148569048368473`*^9, 3.914856914233726*^9}, {
+   3.914858175121533*^9, 3.914858196088745*^9}, {3.914858238868051*^9, 
+   3.914858242048648*^9}, {3.914858419697671*^9, 3.91485842266391*^9}, {
+   3.914858544495638*^9, 3.914858622073737*^9}, {3.914879033151978*^9, 
+   3.914879086479506*^9}, {3.914879163970118*^9, 3.914879189132843*^9}, {
+   3.914879221121553*^9, 3.91487926688603*^9}, {3.914882506392891*^9, 
+   3.914882514038371*^9}, {3.9148836408597517`*^9, 3.9148836998785677`*^9}, {
+   3.914883752007204*^9, 3.914883822936611*^9}, {3.914893011330038*^9, 
+   3.914893071407303*^9}, {3.9148932046765738`*^9, 3.914893288667623*^9}, {
+   3.91489333153927*^9, 3.914893336885783*^9}, {3.914893439595079*^9, 
+   3.914893531660952*^9}, {3.9148936274213963`*^9, 3.914893687779848*^9}, {
+   3.91489386526562*^9, 3.914893957843135*^9}, {3.914936584804528*^9, 
+   3.914936596555539*^9}},
+ CellLabel->
+  "In[405]:=",ExpressionUUID->"910420cc-bd78-4c6a-8c20-31f453af6b84"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", 
+         SqrtBox[
+          RowBox[{"EP3", "-", "p3"}]]}], " ", 
+        SqrtBox[
+         RowBox[{"EPP3", "-", "pp3"}]]}], "+", 
+       RowBox[{
+        SqrtBox[
+         RowBox[{"EP3", "+", "p3"}]], " ", 
+        SqrtBox[
+         RowBox[{"EPP3", "+", "pp3"}]]}]}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.9148932891556797`*^9, 3.914893339479143*^9, {3.9148934845139027`*^9, 
+   3.914893532421055*^9}, {3.914893652560872*^9, 3.914893688229033*^9}, {
+   3.9148938997895927`*^9, 3.914893958475544*^9}, {3.914936588859352*^9, 
+   3.914936597158983*^9}},
+ CellLabel->
+  "Out[415]//MatrixForm=",ExpressionUUID->"b9ef2fbf-ec22-4e04-a7b6-\
+ca55018668e4"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.914856693757509*^9, 
+  3.914856695033407*^9}},ExpressionUUID->"544a314b-bad1-4f45-9e22-\
+5c13a310975f"]
+},
+WindowSize->{987, 747},
+WindowMargins->{{33, Automatic}, {47, Automatic}},
+FrontEndVersion->"13.0 for Mac OS X ARM (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"92841fa9-28ca-4540-864a-6f7f565f245d"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 7343, 201, 367, "Input",ExpressionUUID->"910420cc-bd78-4c6a-8c20-31f453af6b84"],
+Cell[7926, 225, 1143, 34, 48, "Output",ExpressionUUID->"b9ef2fbf-ec22-4e04-a7b6-ca55018668e4"]
+}, Open  ]],
+Cell[9084, 262, 152, 3, 30, "Input",ExpressionUUID->"544a314b-bad1-4f45-9e22-5c13a310975f"]
+}
+]
+*)
+
